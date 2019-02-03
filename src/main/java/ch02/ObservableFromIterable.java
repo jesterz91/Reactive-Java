@@ -33,10 +33,10 @@ public class ObservableFromIterable {
 
 
 
-        BlockingQueue<Order> orderQueue = new ArrayBlockingQueue<>(100);
-        orderQueue.add(new Order("ORD-1"));
-        orderQueue.add(new Order("ORD-2"));
-        orderQueue.add(new Order("ORD-3"));
+        BlockingQueue<ch02.Order> orderQueue = new ArrayBlockingQueue<>(100);
+        orderQueue.add(new ch02.Order("ORD-1"));
+        orderQueue.add(new ch02.Order("ORD-2"));
+        orderQueue.add(new ch02.Order("ORD-3"));
 
         Observable.fromIterable(orderQueue)
                 .subscribe(System.out::println);
