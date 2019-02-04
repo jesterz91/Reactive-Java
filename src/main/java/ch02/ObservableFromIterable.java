@@ -1,6 +1,7 @@
 package ch02;
 
 import io.reactivex.Observable;
+import models.Order;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -33,10 +34,10 @@ public class ObservableFromIterable {
 
 
 
-        BlockingQueue<ch02.Order> orderQueue = new ArrayBlockingQueue<>(100);
-        orderQueue.add(new ch02.Order("ORD-1"));
-        orderQueue.add(new ch02.Order("ORD-2"));
-        orderQueue.add(new ch02.Order("ORD-3"));
+        BlockingQueue<Order> orderQueue = new ArrayBlockingQueue<>(100);
+        orderQueue.add(new Order("ORD-1"));
+        orderQueue.add(new Order("ORD-2"));
+        orderQueue.add(new Order("ORD-3"));
 
         Observable.fromIterable(orderQueue)
                 .subscribe(System.out::println);

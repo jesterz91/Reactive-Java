@@ -1,4 +1,4 @@
-package ch02;
+package models;
 
 public class Order {
     private String id;
