@@ -1,5 +1,7 @@
 package commons;
 
+import java.io.IOException;
+import java.net.InetAddress;
 import java.util.Random;
 
 public class CommonUtils {
@@ -8,6 +10,8 @@ public class CommonUtils {
             "5712cae3137a8f6bcbebe4fb35dfb434";
 //	"e7681f2ac93cbdf1bc3952e30ab80533";
 //	"fe6edeb30e2b9ee7848e4ded0491d8d1";
+
+    public static final String ERROR_CODE = "-500";
 
     public static long startTime;
 
@@ -40,9 +44,19 @@ public class CommonUtils {
         }
     }
 
+    public static boolean isNetworkAvailable() {
+        try {
+            return InetAddress.getByName("www.google.com").isReachable(1000);
+        } catch (IOException e) {
+            Log.v("Network is not available");
+        }
+        return false;
+    }
+
     private static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     public static String numberToAlphabet(long x) {
         return Character.toString(ALPHABET.charAt((int) x % ALPHABET.length()));
     }
+
 }

@@ -59,7 +59,7 @@ public class OpenWeatherMapV2 {
         if (match.find()) {
             return match.group();
         }
-        return "N/A";
+        return "N/DoOnExample";
     }
 
     public static void main(String[] args) {
