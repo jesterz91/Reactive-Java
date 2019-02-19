@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">RxAndroid</string>
+    <string name="hello_activity">hello</string>
+    <string name="loop_activity">loop</string>
+    <string name="event_activity">event</string>
+    <string name="app_info_activity">appInfo</string>
+    <string name="search_activity">search</string>
+    <string name="search_hint">검색어를 입력하세요</string>
+    <string name="async_task">Async Task</string>
+    <string name="timer_task">timer task</string>
+    <string name="restful">restful</string>
+</resources>
